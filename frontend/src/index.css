@@ -15,7 +15,7 @@
   --text-secondary: #475569;
   --text-tertiary: #8492A6;
 
-  /* SUTRA signature gradient strictly for tiny active indicators */
+ /* V.I.P.E.R. signature gradient strictly for tiny active indicators */
   --brand-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 35%, #8b5cf6 70%, #ec4899 100%);
 
   /* Semantic security state colors */
@@ -2002,6 +2002,325 @@ body {
   color: #8b95a7 !important;
   font-size: 0.82rem !important;
   line-height: 1.5 !important;
+}
+
+
+/* V.I.P.E.R. Verdict Card */
+.viper-verdict-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(20, 24, 35, 0.98),
+    rgba(10, 13, 20, 0.98)
+  ) !important;
+  border: 1px solid rgba(139, 92, 246, 0.22) !important;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+.viper-verdict-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #8b5cf6,
+    #6366f1,
+    transparent
+  );
+  opacity: 0.9;
+}
+
+.viper-verdict-card .verdict-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+}
+
+.viper-verdict-card .verdict-statement {
+  color: #aeb7c7 !important;
+  line-height: 1.6 !important;
+}
+
+.viper-verdict-card .verdict-metric-score {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em;
+}
+
+.viper-verdict-card .verdict-metric-level {
+  color: #a78bfa !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+}
+
+/* V.I.P.E.R. Risk Score */
+.viper-result-section .verdict-metric-score {
+  font-size: clamp(3rem, 6vw, 4.8rem) !important;
+  line-height: 0.95 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.06em !important;
+  background: linear-gradient(
+    135deg,
+    #ffffff 10%,
+    #c4b5fd 55%,
+    #8b5cf6 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.viper-result-section .verdict-metric-level {
+  margin-top: 0.75rem !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase;
+}
+
+/* V.I.P.E.R. Threat Indicator */
+.viper-result-section .verdict-metric-level {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  padding: 0.45rem 0.75rem !important;
+  border-radius: 999px !important;
+  background: rgba(139, 92, 246, 0.08) !important;
+  border: 1px solid rgba(139, 92, 246, 0.18) !important;
+}
+
+.viper-result-section .risk-dot {
+  width: 8px !important;
+  height: 8px !important;
+  min-width: 8px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 10px currentColor !important;
+}
+
+.viper-result-section .risk-dot-critical {
+  background: #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+.viper-result-section .risk-dot-high {
+  background: #f97316 !important;
+  color: #f97316 !important;
+}
+
+.viper-result-section .risk-dot-medium {
+  background: #eab308 !important;
+  color: #eab308 !important;
+}
+
+.viper-result-section .risk-dot-low {
+  background: #22c55e !important;
+  color: #22c55e !important;
+}
+
+
+/* V.I.P.E.R. Forensic Evidence Section */
+.viper-result-section .evidence-section {
+  margin-top: 2rem !important;
+  padding: 1.5rem !important;
+  border-radius: 18px !important;
+  background: rgba(12, 16, 24, 0.82) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.viper-result-section .evidence-section h3 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.015em !important;
+}
+
+.viper-result-section .evidence-section > p {
+  color: #8b95a7 !important;
+}
+
+.viper-result-section .evidence-grid {
+  gap: 1rem !important;
+}
+
+.viper-result-section .evidence-card {
+  background: rgba(20, 25, 36, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 14px !important;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease !important;
+}
+
+.viper-result-section .evidence-card:hover {
+  transform: translateY(-2px);
+  background: rgba(25, 30, 43, 0.98) !important;
+  border-color: rgba(139, 92, 246, 0.28) !important;
+}
+
+/* V.I.P.E.R. Evidence Status Accents */
+.viper-result-section .evidence-card {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.viper-result-section .evidence-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: #8b5cf6;
+  opacity: 0.8;
+}
+
+.viper-result-section .evidence-card.card-status-danger::before {
+  background: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.45);
+}
+
+.viper-result-section .evidence-card.card-status-safe::before {
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+
+.viper-result-section .evidence-card.card-status-neutral::before {
+  background: #8b5cf6;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
+}
+
+
+/* V.I.P.E.R. Analysis Section Hierarchy */
+.viper-result-section .evidence-section h3 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+  font-size: 1.15rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+.viper-result-section .evidence-section h3::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.65);
+}
+
+.viper-result-section .evidence-section > p {
+  max-width: 680px !important;
+  margin-top: 0.35rem !important;
+  line-height: 1.55 !important;
+}
+
+
+/* V.I.P.E.R. Audio Analysis Panel */
+.viper-result-section .audio-player-section,
+.viper-result-section .audio-player-card {
+  background: rgba(12, 16, 24, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 16px !important;
+}
+
+.viper-result-section .player-filename {
+  color: #f4f7fb !important;
+  font-weight: 700 !important;
+}
+
+.viper-result-section audio {
+  width: 100% !important;
+  border-radius: 10px !important;
+  filter: brightness(0.9) contrast(1.05);
+}
+
+.viper-result-section .audio-player-section:hover,
+.viper-result-section .audio-player-card:hover {
+  border-color: rgba(139, 92, 246, 0.22) !important;
+}
+
+/* V.I.P.E.R. Recommended Action */
+.viper-result-section .recommendation-card {
+  position: relative !important;
+  overflow: hidden !important;
+  background: linear-gradient(
+    145deg,
+    rgba(18, 23, 34, 0.96),
+    rgba(11, 14, 21, 0.96)
+  ) !important;
+  border: 1px solid rgba(139, 92, 246, 0.18) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18) !important;
+}
+
+.viper-result-section .recommendation-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #8b5cf6;
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.35);
+}
+
+.viper-result-section .recommendation-card h3 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+.viper-result-section .recommendation-card p {
+  color: #aeb7c7 !important;
+  line-height: 1.6 !important;
+}
+
+/* V.I.P.E.R. Result Flow */
+.viper-result-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+}
+
+.viper-result-section > * {
+  min-width: 0;
+}
+
+.viper-result-section .verdict-card,
+.viper-result-section .viper-verdict-card {
+  margin-bottom: 0.25rem !important;
+}
+
+.viper-result-section .evidence-section {
+  margin-top: 0.25rem !important;
+}
+
+.viper-result-section .recommendation-card {
+  margin-top: 0.25rem !important;
+}
+
+/* V.I.P.E.R. Final Card Cleanup */
+.viper-result-section .evidence-card,
+.viper-result-section .recommendation-card,
+.viper-result-section .audio-player-section,
+.viper-result-section .audio-player-card {
+  box-shadow: none !important;
+}
+
+.viper-result-section .evidence-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+.viper-result-section .verdict-card,
+.viper-result-section .viper-verdict-card {
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
 }
 
 

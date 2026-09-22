@@ -251,7 +251,7 @@ export const MicRecorder: React.FC<MicRecorderProps> = ({
 
   const handleSubmit = () => {
     if (audioBlob && !loading) {
-      const file = new File([audioBlob], `sutra_recording_${Date.now()}.wav`, { type: 'audio/wav' });
+      const file = new File([audioBlob], `viper_recording_${Date.now()}.wav`, { type: 'audio/wav' });
       onAnalyze(file, speakerId.trim() || undefined);
     }
   };

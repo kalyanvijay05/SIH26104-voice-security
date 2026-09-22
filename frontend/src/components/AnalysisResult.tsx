@@ -20,13 +20,13 @@ export const AnalysisResult: React.FC<AnalysisResultProps> = ({ result, audioFil
 
   const verdictTheme = isBonaFide ? 'verdict-theme-genuine' : 'verdict-theme-synthetic';
 
-  const verdictTitle = isBonaFide
-    ? 'Likely Genuine Voice'
-    : 'Likely Synthetic Voice';
+ const verdictTitle = isBonaFide
+  ? 'Voice Appears Authentic'
+  : 'Synthetic Voice Detected';
 
-  const verdictBadge = isBonaFide
-    ? 'Bona Fide Acoustic Signal'
-    : 'Synthetic / Cloning Artifacts Detected';
+const verdictBadge = isBonaFide
+  ? 'AUTHENTICITY SIGNAL'
+  : 'SYNTHETIC / CLONING SIGNAL';
 
   const togglePlay = () => {
     if (!audioRef.current && audioFile) {
@@ -96,19 +96,19 @@ export const AnalysisResult: React.FC<AnalysisResultProps> = ({ result, audioFil
               <span className="verdict-trace">TRACE {request_id.slice(0, 8)}</span>
             </div>
             <h2 className="verdict-headline">{verdictTitle}</h2>
-            <p className="verdict-statement">
-              {risk_assessment.recommended_action || (isBonaFide
-                ? 'Acoustic spectral patterns show natural human vocal characteristics. Standard verification sufficient.'
-                : 'Spectral distribution indicates artificial speech synthesis, voice conversion, or cloning manipulation.')}
-            </p>
+           <p className="verdict-statement">
+  {risk_assessment.recommended_action || (isBonaFide
+    ? 'Acoustic patterns are consistent with natural human speech. Continue with standard verification.'
+    : 'Acoustic patterns indicate possible synthetic speech, voice conversion, or voice-cloning manipulation.')}
+</p>
           </div>
 
           <div className="verdict-metric-block">
             <div className="verdict-metric-score">{riskPercent}%</div>
-            <div className="verdict-metric-level">
-              <span className={`risk-dot risk-dot-${risk_assessment.risk_level.toLowerCase()}`} />
-              {risk_assessment.risk_level} RISK
-            </div>
+           <div className="verdict-metric-level">
+  <span className={`risk-dot risk-dot-${risk_assessment.risk_level.toLowerCase()}`} />
+  THREAT LEVEL · {risk_assessment.risk_level}
+</div>
           </div>
         </div>
       </div>
@@ -238,7 +238,7 @@ export const AnalysisResult: React.FC<AnalysisResultProps> = ({ result, audioFil
       {audioFile && (
         <div className="forensic-player-container">
           <div className="player-meta">
-            <span className="player-title">Analyzed Audio Capture</span>
+            <span className="player-title">Analyzed voice Capture</span>
             <span className="player-filename">
   {audioFile.name.replace(/^sutra_/i, 'viper_')}
 </span>
