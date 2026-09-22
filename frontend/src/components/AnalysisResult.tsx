@@ -86,7 +86,7 @@ export const AnalysisResult: React.FC<AnalysisResultProps> = ({ result, audioFil
     : 'No coercion, urgency, or impersonation keywords detected';
 
   return (
-    <section className="sutra-result-section">
+    <section className="viper-result-section">
       {/* 1. Forensic Charcoal Verdict Banner */}
       <div className={`forensic-verdict-banner ${verdictTheme}`}>
         <div className="verdict-banner-inner">
@@ -239,7 +239,9 @@ export const AnalysisResult: React.FC<AnalysisResultProps> = ({ result, audioFil
         <div className="forensic-player-container">
           <div className="player-meta">
             <span className="player-title">Analyzed Audio Capture</span>
-            <span className="player-filename">{audioFile.name}</span>
+            <span className="player-filename">
+  {audioFile.name.replace(/^sutra_/i, 'viper_')}
+</span>
           </div>
           <div className="player-controls">
             <button className="player-play-btn" onClick={togglePlay} aria-label={isPlaying ? 'Pause' : 'Play'}>
@@ -285,7 +287,7 @@ export const AnalysisResult: React.FC<AnalysisResultProps> = ({ result, audioFil
       >
         <summary className="forensic-tech-summary">
           <div className="summary-label-group">
-            <span className="summary-title">How SUTRA reached this result</span>
+            <span className="summary-title">How V.I.P.E.R reached this result</span>
             <span className="summary-subtitle">Technical signals · AASIST · ECAPA-TDNN · Whisper</span>
           </div>
           {techExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}

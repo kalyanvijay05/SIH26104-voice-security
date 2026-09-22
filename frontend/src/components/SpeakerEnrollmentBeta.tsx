@@ -38,7 +38,7 @@ export const SpeakerEnrollmentBeta: React.FC = () => {
         <span className="beta-badge">Beta</span>
       </div>
       <p className="beta-desc">
-        Create a trusted reference voice profile to compare incoming recordings against using ECAPA-TDNN 192-dimensional embeddings.
+       Register a trusted voice profile so V.I.P.E.R. can verify whether future recordings match the enrolled speaker.
       </p>
 
       <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>

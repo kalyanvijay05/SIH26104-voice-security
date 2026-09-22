@@ -1144,3 +1144,864 @@ body {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+
+
+
+
+/* =========================================================
+   V.I.P.E.R. — 2026 VISUAL SYSTEM
+   UI-only override layer
+   ========================================================= */
+
+:root {
+  --viper-bg: #07090d;
+  --viper-surface: #0d1118;
+  --viper-surface-2: #111722;
+  --viper-border: rgba(255, 255, 255, 0.08);
+  --viper-border-hover: rgba(255, 255, 255, 0.15);
+  --viper-text: #f4f7fb;
+  --viper-muted: #8b95a7;
+  --viper-dim: #596273;
+  --viper-accent: #8b5cf6;
+  --viper-accent-2: #6366f1;
+  --viper-green: #22c55e;
+  --viper-red: #ef4444;
+}
+
+/* Main application */
+.sutra-app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(99, 102, 241, 0.12), transparent 35%),
+    var(--viper-bg);
+  color: var(--viper-text);
+}
+
+/* Header */
+.viper-header {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--viper-border);
+}
+
+.viper-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.viper-logo {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25);
+}
+
+.viper-brand-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.viper-brand-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: rgba(139, 92, 246, 0.12);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.viper-brand-tagline {
+  margin-top: 3px;
+  color: var(--viper-muted);
+  font-size: 11px;
+}
+
+.viper-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--viper-border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.025);
+  color: var(--viper-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.viper-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--viper-green);
+  box-shadow: 0 0 10px rgba(34,197,94,.65);
+}
+
+.viper-status-pill.offline .viper-status-dot {
+  background: var(--viper-red);
+  box-shadow: 0 0 10px rgba(239,68,68,.5);
+}
+
+/* Hero */
+.sutra-hero {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 78px 0 46px;
+}
+
+.sutra-hero-title {
+  max-width: 850px;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+  margin: 0 0 22px;
+  background: linear-gradient(120deg, #ffffff 15%, #c4b5fd 60%, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sutra-hero-desc {
+  max-width: 650px;
+  color: var(--viper-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Input card */
+.sutra-input-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 28px;
+  padding: 24px;
+  background: rgba(13,17,24,.88);
+  border: 1px solid var(--viper-border);
+  border-radius: 20px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.25),
+    inset 0 1px 0 rgba(255,255,255,.025);
+  backdrop-filter: blur(18px);
+}
+
+/* Upload / record switcher */
+.input-mode-switcher {
+  background: #090c12;
+  border-color: var(--viper-border);
+  border-radius: 11px;
+}
+
+.mode-btn {
+  color: var(--viper-muted);
+  border-radius: 8px;
+  padding: 9px 15px;
+}
+
+.mode-btn:hover {
+  color: white;
+}
+
+.mode-btn.active {
+  background: #171d29;
+  color: white;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+}
+
+/* Upload zone */
+.sutra-dropzone {
+  background:
+    radial-gradient(circle at center, rgba(99,102,241,.07), transparent 50%),
+    #090d14;
+  border-color: rgba(139,92,246,.22);
+  border-radius: 15px;
+  padding: 54px 24px;
+}
+
+.sutra-dropzone:hover {
+  background:
+    radial-gradient(circle at center, rgba(99,102,241,.12), transparent 55%),
+    #0b1019;
+  border-color: rgba(139,92,246,.5);
+}
+
+.upload-icon-circle {
+  width: 54px;
+  height: 54px;
+  background: rgba(139,92,246,.1);
+  border-color: rgba(139,92,246,.2);
+  color: #a78bfa;
+  box-shadow: none;
+}
+
+.upload-main-title {
+  color: white;
+  font-size: 17px;
+}
+
+.upload-main-desc {
+  color: var(--viper-muted);
+}
+
+.upload-formats-badge {
+  color: var(--viper-dim);
+}
+
+.upload-choose-btn {
+  background: white;
+  color: #080a0f;
+  border: none;
+  border-radius: 9px;
+  padding: 10px 18px;
+}
+
+.upload-choose-btn:hover {
+  transform: translateY(-1px);
+  border-color: transparent;
+}
+
+/* Primary buttons */
+.sutra-btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(99,102,241,.22);
+}
+
+.sutra-btn-primary:hover:not(:disabled) {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.sutra-btn-danger {
+  border-radius: 10px;
+}
+
+/* Proof strip */
+.sutra-proof-strip {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 45px;
+  border-top-color: var(--viper-border);
+}
+
+.proof-name {
+  color: white;
+}
+
+.proof-tag {
+  color: var(--viper-green);
+}
+
+.proof-desc {
+  color: var(--viper-muted);
+}
+
+/* Recording visualizer */
+.mic-visualizer-box {
+  background: #090d14;
+  border-color: var(--viper-border);
+  border-radius: 15px;
+}
+
+.waveform-bar {
+  background: rgba(255,255,255,.1);
+}
+
+.waveform-bar.active,
+.waveform-bar.brand-accent {
+  background: linear-gradient(to top, #7c3aed, #818cf8);
+}
+
+/* Loading */
+.sutra-analyzing-card {
+  width: min(1180px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--viper-surface);
+  border-color: var(--viper-border);
+  border-radius: 18px;
+}
+
+.analysis-spinner {
+  border-color: rgba(255,255,255,.08);
+  border-top-color: #8b5cf6;
+}
+
+/* Speaker verification */
+.sutra-beta-section {
+  width: min(1180px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+  border-top-color: var(--viper-border);
+}
+
+.beta-title-row {
+  color: white;
+}
+
+.beta-badge {
+  border-color: var(--viper-border-hover);
+  color: var(--viper-muted);
+}
+
+.beta-desc {
+  color: var(--viper-muted);
+}
+
+/* Footer */
+.sutra-app > footer {
+  width: min(1180px, calc(100% - 40px));
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: var(--viper-dim) !important;
+  border-top-color: var(--viper-border) !important;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .viper-header {
+    width: min(100% - 28px, 1180px);
+    padding: 17px 0;
+  }
+
+  .viper-status-pill {
+    font-size: 0;
+    padding: 9px;
+  }
+
+  .viper-status-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .sutra-hero {
+    width: calc(100% - 28px);
+    padding-top: 55px;
+  }
+
+  .sutra-input-container,
+  .sutra-proof-strip,
+  .sutra-beta-section {
+    width: calc(100% - 28px);
+  }
+
+  .sutra-hero-title {
+    font-size: 45px;
+  }
+}
+
+
+
+/* V.I.P.E.R. — Speaker Enrollment dark theme */
+
+.speaker-enrollment-card,
+.sutra-beta-section {
+  background: #0d1118 !important;
+  color: #f4f7fb !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.speaker-opt-input {
+  background: #090d14 !important;
+  color: #f4f7fb !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.speaker-opt-input::placeholder {
+  color: #596273 !important;
+}
+
+.speaker-opt-input:focus {
+  border-color: rgba(139, 92, 246, 0.55) !important;
+  outline: none !important;
+}
+
+.speaker-enrollment-card button,
+.sutra-beta-section button {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+.speaker-enrollment-card button:hover,
+.sutra-beta-section button:hover {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1) !important;
+}
+
+/* V.I.P.E.R. — File picker styling */
+
+.sutra-dropzone input[type="file"] {
+  color: #f4f7fb !important;
+  background: transparent !important;
+}
+
+.sutra-dropzone input[type="file"]::file-selector-button {
+  background: #171d29 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(139, 92, 246, 0.35) !important;
+  border-radius: 8px !important;
+  padding: 9px 14px !important;
+  margin-right: 10px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+}
+
+.sutra-dropzone input[type="file"]::file-selector-button:hover {
+  background: #7c3aed !important;
+  border-color: #8b5cf6 !important;
+}
+
+/* If the custom Choose audio file button is separate */
+.sutra-dropzone .upload-choose-btn {
+  background: #171d29 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(139, 92, 246, 0.35) !important;
+}
+
+.sutra-dropzone .upload-choose-btn:hover {
+  background: #7c3aed !important;
+  color: #ffffff !important;
+}
+
+/* V.I.P.E.R. — Speaker Verification file picker */
+
+.sutra-beta-section input[type="file"] {
+  color: #f4f7fb !important;
+  background: transparent !important;
+}
+
+.sutra-beta-section input[type="file"]::file-selector-button {
+  background: #171d29 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(139, 92, 246, 0.4) !important;
+  border-radius: 8px !important;
+  padding: 9px 14px !important;
+  margin-right: 10px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+}
+
+.sutra-beta-section input[type="file"]::file-selector-button:hover {
+  background: #7c3aed !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   V.I.P.E.R. — Analysis Result Dark Theme
+   ========================================================= */
+
+.sutra-result-section {
+  width: min(1180px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+  color: #f4f7fb !important;
+}
+
+.sutra-result-section * {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Result cards */
+.sutra-result-section .evidence-card,
+.sutra-result-section .forensic-player,
+.sutra-result-section .editorial-transcript-card,
+.sutra-result-section .forensic-tech-accordion,
+.sutra-result-section .forensic-signals-grid,
+.sutra-result-section .forensic-decision-matrix {
+  background: #0d1118 !important;
+  color: #f4f7fb !important;
+}
+
+/* Secondary surfaces */
+.sutra-result-section .forensic-signal-cell,
+.sutra-result-section .matrix-cell {
+  background: #090d14 !important;
+  color: #f4f7fb !important;
+}
+
+/* Result headings */
+.sutra-result-section h2,
+.sutra-result-section h3,
+.sutra-result-section h4 {
+  color: #f4f7fb !important;
+}
+
+/* Result descriptions */
+.sutra-result-section p {
+  color: #8b95a7 !important;
+}
+
+/* Transcript */
+.editorial-transcript-card {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Technical details */
+.forensic-tech-accordion {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Keep genuine result green */
+.verdict-theme-genuine {
+  background: rgba(34, 197, 94, 0.06) !important;
+  border-color: rgba(34, 197, 94, 0.22) !important;
+}
+
+/* Keep synthetic result red */
+.verdict-theme-synthetic {
+  background: rgba(239, 68, 68, 0.06) !important;
+  border-color: rgba(239, 68, 68, 0.22) !important;
+}
+
+
+ /* V.I.P.E.R. — Recording action buttons */
+
+.sutra-app .sutra-btn-ghost {
+  background: #171d29 !important;
+  color: #f4f7fb !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+}
+
+.sutra-app .sutra-btn-ghost:hover {
+  background: #202838 !important;
+  color: #ffffff !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+.sutra-app .sutra-btn-danger {
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(239, 68, 68, 0.25) !important;
+}
+
+.sutra-app .sutra-btn-danger:hover {
+  background: rgba(239, 68, 68, 0.18) !important;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   V.I.P.E.R. — FORENSIC SIGNAL ANALYSIS
+   ========================================================= */
+
+.sutra-result-section {
+  color: #f4f7fb !important;
+}
+
+/* Main evidence cards */
+.evidence-card {
+  background: #0d1118 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f4f7fb !important;
+}
+
+/* Card contents */
+.evidence-card h3,
+.evidence-card h4,
+.evidence-card strong {
+  color: #f4f7fb !important;
+}
+
+.evidence-card p,
+.evidence-card span {
+  color: #8b95a7 !important;
+}
+
+/* Important result values */
+.evidence-card .signal-value,
+.evidence-card .signal-label {
+  color: #f4f7fb !important;
+}
+
+/* Signal cells */
+.forensic-signal-cell {
+  background: #090d14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f4f7fb !important;
+}
+
+/* Signal headings */
+.forensic-signal-cell strong,
+.forensic-signal-cell h3,
+.forensic-signal-cell h4 {
+  color: #f4f7fb !important;
+}
+
+/* Signal descriptions */
+.forensic-signal-cell p,
+.forensic-signal-cell span {
+  color: #8b95a7 !important;
+}
+
+/* Transcript */
+.editorial-transcript-card {
+  background: #0d1118 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f4f7fb !important;
+}
+
+.editorial-transcript-card p,
+.editorial-transcript-card span {
+  color: #8b95a7 !important;
+}
+
+.editorial-transcript-card blockquote {
+  color: #e5e7eb !important;
+  border-left-color: #7c3aed !important;
+}
+
+/* Audio player */
+.forensic-player {
+  background: #0d1118 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f4f7fb !important;
+}
+
+
+/* =========================================================
+   V.I.P.E.R. — RESULT SUMMARY
+   ========================================================= */
+
+.summary-title {
+  color: #f4f7fb !important;
+}
+
+.summary-title * {
+  color: #f4f7fb !important;
+}
+
+.summary-card,
+.summary-section,
+.summary-content {
+  color: #f4f7fb !important;
+}
+
+.summary-card p,
+.summary-card span,
+.summary-section p,
+.summary-section span {
+  color: #8b95a7 !important;
+}
+
+.summary-card strong,
+.summary-section strong {
+  color: #f4f7fb !important;
+}
+
+
+/* =========================================================
+   V.I.P.E.R. — ANALYSIS RESULT DETAILS
+   ========================================================= */
+
+.forensic-player-container {
+  background: #0d1118 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f4f7fb !important;
+}
+
+.player-title {
+  color: #f4f7fb !important;
+  font-weight: 700 !important;
+}
+
+.player-filename {
+  color: #8b95a7 !important;
+}
+
+.player-timer {
+  color: #8b95a7 !important;
+}
+
+.player-waveform-track {
+  background: transparent !important;
+}
+
+.player-waveform-bar {
+  background: #7c3aed !important;
+}
+
+/* =========================================================
+   V.I.P.E.R. — HOW THE RESULT WAS REACHED
+   ========================================================= */
+
+.forensic-tech-accordion {
+  background: #0d1118 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f4f7fb !important;
+}
+
+.forensic-tech-summary {
+  color: #f4f7fb !important;
+  background: #0d1118 !important;
+}
+
+.summary-label-group {
+  color: #f4f7fb !important;
+}
+
+.summary-title {
+  color: #f4f7fb !important;
+  font-weight: 700 !important;
+}
+
+.summary-subtitle {
+  color: #8b95a7 !important;
+}
+
+.forensic-tech-body {
+  background: #090d14 !important;
+  color: #f4f7fb !important;
+}
+
+.forensic-signals-grid {
+  background: transparent !important;
+}
+
+.forensic-signal-cell {
+  background: #0d1118 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f4f7fb !important;
+}
+
+.cell-label {
+  color: #8b95a7 !important;
+}
+
+.cell-value {
+  color: #f4f7fb !important;
+  font-weight: 700 !important;
+}
+
+.cell-sub {
+  color: #707b8f !important;
+}
+
+.forensic-decision-matrix {
+  background: #0d1118 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.matrix-title {
+  color: #f4f7fb !important;
+}
+
+.matrix-factor {
+  color: #f4f7fb !important;
+}
+
+.matrix-reason {
+  color: #8b95a7 !important;
+}
+
+.matrix-status {
+  color: #f4f7fb !important;
+}
+
+.viper-result-section {
+  color: #f4f7fb !important;
+}
+
+/* =========================================================
+   V.I.P.E.R. — FORENSIC CARD ICONS
+   ========================================================= */
+
+.evidence-card-icon {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 10px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: rgba(124, 58, 237, 0.12) !important;
+  border: 1px solid rgba(139, 92, 246, 0.22) !important;
+
+  color: #a78bfa !important;
+}
+
+.evidence-card-icon svg {
+  color: #a78bfa !important;
+  stroke: #a78bfa !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Synthetic / threat cards */
+.card-status-danger .evidence-card-icon {
+  background: rgba(239, 68, 68, 0.10) !important;
+  border-color: rgba(239, 68, 68, 0.22) !important;
+  color: #f87171 !important;
+}
+
+.card-status-danger .evidence-card-icon svg {
+  color: #f87171 !important;
+  stroke: #f87171 !important;
+}
+
+/* Safe cards */
+.card-status-safe .evidence-card-icon {
+  background: rgba(34, 197, 94, 0.10) !important;
+  border-color: rgba(34, 197, 94, 0.20) !important;
+  color: #4ade80 !important;
+}
+
+.card-status-safe .evidence-card-icon svg {
+  color: #4ade80 !important;
+  stroke: #4ade80 !important;
+}
+
+/* Neutral / unspecified speaker */
+.card-status-neutral .evidence-card-icon {
+  background: rgba(139, 92, 246, 0.10) !important;
+  border-color: rgba(139, 92, 246, 0.20) !important;
+  color: #a78bfa !important;
+}
+
+.card-status-neutral .evidence-card-icon svg {
+  color: #a78bfa !important;
+  stroke: #a78bfa !important;
+}
+
+/* =========================================================
+   V.I.P.E.R. — FORENSIC CARD TEXT
+   ========================================================= */
+
+.evidence-card-label {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #f4f7fb !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin-top: 0.85rem !important;
+}
+
+.evidence-card-detail {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #8b95a7 !important;
+  font-size: 0.82rem !important;
+  line-height: 1.5 !important;
+}
+
+

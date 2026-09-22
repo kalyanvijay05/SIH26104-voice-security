@@ -161,8 +161,7 @@ export const App: React.FC = () => {
 
       {/* Quiet Footer */}
       <footer style={{ marginTop: '5rem', paddingTop: '2rem', borderTop: '1px solid var(--border-subtle)', textAlign: 'center', fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>
-        SUTRA analyzes supplied recordings and browser microphone input. It does not operate on cellular telephony basebands.
-      </footer>
+        V.I.P.E.R. analyzes supplied recordings and browser microphone input. It does not operate on cellular telephony basebands.      </footer>
     </div>
   );
 };
